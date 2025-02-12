@@ -8,12 +8,14 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 import java.util.Date;
 
 @SpringBootApplication
 @RequiredArgsConstructor
+@EnableFeignClients
 public class MsPatientApplication implements CommandLineRunner {
 
     final PatientRepository patientRepository;
@@ -29,8 +31,8 @@ public class MsPatientApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         config.exposeIdsFor(Patient.class);
 
-        Patient p1=patientRepository.save(new Patient(null, "said", null));
-        Patient p2=patientRepository.save(new Patient(null, "karim", null));
+        Patient p1=patientRepository.save(new Patient(null, "said", null,null));
+        Patient p2=patientRepository.save(new Patient(null, "karim", null,null));
 
         antecedentRepository.save(new AntecedentMedical(null,"Asthm",new Date(),p1));
         antecedentRepository.save(new AntecedentMedical(null,"Diabete",new Date(),p1));

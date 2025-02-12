@@ -26,10 +26,11 @@ public class MsOrdonnanceApplication  implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Ordonnance o1 = new Ordonnance(null, new Date(), null, 1L,null);
+        Ordonnance o1 = new Ordonnance(null, new Date(), null, 1L,2L, null,null);
         Ordonnance o2 =Ordonnance.builder()
                 .dateOrdonnance(new Date())
                 .idPatient(2L)
+                .idRemboursement(1L)
                 .build();
         o1=ordonnanceRepository.save(o1);
         o2=ordonnanceRepository.save(o2);

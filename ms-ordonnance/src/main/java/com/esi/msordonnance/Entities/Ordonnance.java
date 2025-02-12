@@ -1,6 +1,7 @@
 package com.esi.msordonnance.Entities;
 
 import com.esi.msordonnance.DTO.PatientDTO;
+import com.esi.msordonnance.DTO.RemboursementDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,7 +27,11 @@ public class Ordonnance {
     private List<Medicament> medicaments;
 
     private Long idPatient;
+    private Long idRemboursement;
 
     @Transient
     private PatientDTO patientDTO;
+
+    @Transient
+    private RemboursementDTO remboursement;
 }

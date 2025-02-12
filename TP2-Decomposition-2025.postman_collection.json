@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "9dae1e1c-9a5a-4270-af53-b548fddb14a2",
+		"name": "TP2-Decomposition-2025",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15255541"
+	},
+	"item": [
+		{
+			"name": "Ordonnance_with_Patient-Remboursement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/ordonnance/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"ordonnance",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patient_With_Ordonnance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/patient/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
